@@ -7,20 +7,18 @@
 #define PLATFORM_CONFIG_H
 
 #include <mm/generic_ram_layout.h>
+#include <util.h>
 
 /* Make stacks aligned to data cache line length */
 #define STACK_ALIGNMENT			64
-
-/* Common size helper macros */
-#define SZ_2G				UL(0x80000000)
 
 #if defined(PLATFORM_FLAVOR_rdaspen)
 
 /* DRAM constants */
 #define DRAM0_BASE			UL(0x80000000)
-#define DRAM0_SIZE			SZ_2G
+#define DRAM0_SIZE			SIZE_2G
 #define DRAM1_BASE			ULL(0x20000000000)
-#define DRAM1_SIZE			SZ_2G
+#define DRAM1_SIZE			SIZE_2G
 
 /* UART constants */
 #define UART_BAUDRATE			115200
@@ -42,10 +40,10 @@
 
 /* DRAM constants */
 #define DRAM0_BASE			UL(0x80000000)
-#define DRAM0_SIZE			SZ_2G
+#define DRAM0_SIZE			SIZE_2G
 
 #define DRAM1_BASE			ULL(0x8080000000)
-#define DRAM1_SIZE			SZ_2G
+#define DRAM1_SIZE			SIZE_2G
 
 #define SYS_COUNTER_FREQ_IN_TICKS	UL(7372800)
 /* UART constants */
